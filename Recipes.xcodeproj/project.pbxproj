@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		AA44432B2A517E0C00E113E4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA44432A2A517E0C00E113E4 /* Extensions.swift */; };
 		AA44432D2A51831800E113E4 /* EmptyListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA44432C2A51831800E113E4 /* EmptyListItem.swift */; };
+		AA44432F2A51A14E00E113E4 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA44432E2A51A14E00E113E4 /* TagView.swift */; };
+		AA4443322A51A5EE00E113E4 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AA4443312A51A5EE00E113E4 /* Localizable.xcstrings */; };
 		AA5212C82A498085008D33A8 /* RecipesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5212C72A498085008D33A8 /* RecipesApp.swift */; };
 		AA5212CA2A498085008D33A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5212C92A498085008D33A8 /* ContentView.swift */; };
 		AA5212CC2A498086008D33A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA5212CB2A498086008D33A8 /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		AA44432A2A517E0C00E113E4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AA44432C2A51831800E113E4 /* EmptyListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListItem.swift; sourceTree = "<group>"; };
+		AA44432E2A51A14E00E113E4 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		AA4443312A51A5EE00E113E4 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		AA5212C42A498085008D33A8 /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5212C72A498085008D33A8 /* RecipesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesApp.swift; sourceTree = "<group>"; };
 		AA5212C92A498085008D33A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA4443302A51A5DE00E113E4 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				AA4443312A51A5EE00E113E4 /* Localizable.xcstrings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		AA5212BB2A498085008D33A8 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +81,7 @@
 		AA5212C62A498085008D33A8 /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				AA4443302A51A5DE00E113E4 /* Localization */,
 				AAB8A9FB2A4AAFC700E5188E /* Models */,
 				AAE7AB112A49843700C94FC0 /* Views */,
 				AA5212D92A4980A3008D33A8 /* Pages */,
@@ -115,6 +128,7 @@
 			children = (
 				AAE7AB122A49844500C94FC0 /* RecipeCardView.swift */,
 				AA44432C2A51831800E113E4 /* EmptyListItem.swift */,
+				AA44432E2A51A14E00E113E4 /* TagView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,6 +175,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = AA5212BB2A498085008D33A8;
 			productRefGroup = AA5212C52A498085008D33A8 /* Products */;
@@ -179,6 +194,7 @@
 			files = (
 				AA5212CF2A498086008D33A8 /* Preview Assets.xcassets in Resources */,
 				AA5212CC2A498086008D33A8 /* Assets.xcassets in Resources */,
+				AA4443322A51A5EE00E113E4 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +207,7 @@
 			files = (
 				AAE7AB132A49844500C94FC0 /* RecipeCardView.swift in Sources */,
 				AA44432B2A517E0C00E113E4 /* Extensions.swift in Sources */,
+				AA44432F2A51A14E00E113E4 /* TagView.swift in Sources */,
 				AAE7AB102A49835F00C94FC0 /* FavoritesPage.swift in Sources */,
 				AA5212CA2A498085008D33A8 /* ContentView.swift in Sources */,
 				AA44432D2A51831800E113E4 /* EmptyListItem.swift in Sources */,

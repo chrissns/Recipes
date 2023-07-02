@@ -1,5 +1,226 @@
 {
   "sourceLanguage" : "en",
-  "strings" : {},
+  "strings" : {
+    "Couldn't find anything for your search." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es wurde kein Ergebnis für deine Suche gefunden."
+          }
+        }
+      }
+    },
+    "Create recipe" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rezept speichern"
+          }
+        }
+      }
+    },
+    "Details" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Details"
+          }
+        }
+      }
+    },
+    "Favorites" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Favoriten"
+          }
+        }
+      }
+    },
+    "Ingredient..." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zutat..."
+          }
+        }
+      }
+    },
+    "Ingredients" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zutaten"
+          }
+        }
+      }
+    },
+    "Instructions" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anleitung"
+          }
+        }
+      }
+    },
+    "Name and info" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name und Beschreibung"
+          }
+        }
+      }
+    },
+    "Name..." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name..."
+          }
+        }
+      }
+    },
+    "New recipe" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neues Rezept"
+          }
+        }
+      }
+    },
+    "No shared recipes." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine geteilten Rezepte."
+          }
+        }
+      }
+    },
+    "Recipes" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rezepte"
+          }
+        }
+      }
+    },
+    "Recipes that somebody shared with you." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rezepte, die mit dir geteilt wurden."
+          }
+        }
+      }
+    },
+    "Recipes you made yourself." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine eigenen Rezepte."
+          }
+        }
+      }
+    },
+    "Search for recipes, ingredients, ..." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suche nach Rezepten, Zutaten, ..."
+          }
+        }
+      }
+    },
+    "Shared" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geteilt"
+          }
+        }
+      }
+    },
+    "Shared recipes" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geteilte Rezepte"
+          }
+        }
+      }
+    },
+    "Short info..." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurzbeschreibung..."
+          }
+        }
+      }
+    },
+    "Tap the \"+\" icon to add an ingredient." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tippe auf \"+\" um eine Zutat hinzuzufügen."
+          }
+        }
+      }
+    },
+    "Tap the star icon in your recipe to add it to your favorites." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tippe auf den Stern in deinem Rezept um es zu deinen Favoriten hinzuzufügen."
+          }
+        }
+      }
+    },
+    "Write instructions..." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schreibe eine Anleitung..."
+          }
+        }
+      }
+    },
+    "Your recipes" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine Rezepte"
+          }
+        }
+      }
+    }
+  },
   "version" : "1.0"
 }

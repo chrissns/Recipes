@@ -20,7 +20,7 @@ struct FavoritesPage: View {
                     RecipeDetailView(recipe: recipe)
                 } label: {
                     HStack {
-                        Image(systemName: "person")
+                        Image(systemName: "list.bullet.rectangle.portrait")
                             .frame(width: iconSize, height: iconSize)
                         VStack(alignment: .leading) {
                             Text(recipe.title)

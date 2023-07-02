@@ -26,7 +26,7 @@ struct YourRecipesPage: View {
                     RecipeDetailView(recipe: recipe)
                 } label: {
                     HStack {
-                        Image(systemName: "person")
+                        Image(systemName: "list.bullet.rectangle.portrait")
                             .frame(width: iconSize, height: iconSize)
                         VStack(alignment: .leading) {
                             Text(recipe.title)
@@ -36,8 +36,18 @@ struct YourRecipesPage: View {
                         }
                     }
                 }
-                .swipeActions {
-                    Button() {
+                .swipeActions(edge: .leading) {
+                    Button {
+                        withAnimation {
+                            print("Edit: \(recipe.title)")
+                        }
+                    } label: {
+                        Image(systemName: "pencil")
+                    }
+                    .tint(.accentColor)
+                }
+                .swipeActions(edge: .trailing) {
+                    Button {
                         withAnimation {
                             modelContext.delete(object: recipe)
                         }

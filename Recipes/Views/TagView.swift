@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct TagView: View {
+    
+    @State var text: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(text)
+                .foregroundStyle(.white)
+                .padding(5)
+                .lineLimit(1)
+        }
+        .background {
+            Color(red: 0.75, green: 0.75, blue: 0.8)
+        }
+        .cornerRadius(5.0)
     }
-}
-
-#Preview {
-    TagView()
 }

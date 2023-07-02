@@ -38,6 +38,13 @@ struct RecipeDetailView: View {
         .toolbar {
             ToolbarItem {
                 Button {
+                    print("Share: \(recipe.title)")
+                } label: {
+                    Image(systemName: "square.and.arrow.up")
+                }
+            }
+            ToolbarItem {
+                Button {
                     recipe.isFavorite.toggle()
                 } label: {
                     if recipe.isFavorite {

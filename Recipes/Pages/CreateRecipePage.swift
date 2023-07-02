@@ -17,14 +17,12 @@ struct CreateRecipePage: View {
         ZStack {
             List {
                 Section {
-                    // Text field for the name
                     TextField("Name...", text: $recipe.title)
                     TextField("Short info...", text: $recipe.shortInfo)
                 } header: {
                     Text("Name and info")
                 }
                 Section {
-                    // A list of items with a text field for name, number select for amount and dropdown select for unit
                     if recipe.ingredients.count > 0 {
                         ForEach(recipe.ingredients.indices, id: \.self) { index in
                             HStack {
@@ -58,7 +56,6 @@ struct CreateRecipePage: View {
                     }
                 }
                 Section {
-                    // Long text area
                     TextField("Write instructions...", text: $recipe.instructions, axis: .vertical)
                 } header: {
                     Text("Instructions")

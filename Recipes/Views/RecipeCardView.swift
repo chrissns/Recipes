@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct RecipeDetailView: View {
     
@@ -46,6 +47,7 @@ struct RecipeDetailView: View {
             ToolbarItem {
                 Button {
                     recipe.isFavorite.toggle()
+                    WidgetCenter.shared.reloadTimelines(ofKind: "Recipes")
                 } label: {
                     if recipe.isFavorite {
                         Image(systemName: "star.fill")

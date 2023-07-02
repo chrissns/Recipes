@@ -23,11 +23,26 @@
 		AAE7AB152A49889400C94FC0 /* YourRecipesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE7AB142A49889400C94FC0 /* YourRecipesPage.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AA44434D2A51B07A00E113E4 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		AA44432A2A517E0C00E113E4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AA44432C2A51831800E113E4 /* EmptyListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyListItem.swift; sourceTree = "<group>"; };
 		AA44432E2A51A14E00E113E4 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		AA4443312A51A5EE00E113E4 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		AA4443392A51B07700E113E4 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		AA44433B2A51B07700E113E4 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		AA5212C42A498085008D33A8 /* Recipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Recipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5212C72A498085008D33A8 /* RecipesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesApp.swift; sourceTree = "<group>"; };
 		AA5212C92A498085008D33A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,10 +77,20 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		AA4443382A51B07700E113E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA4443392A51B07700E113E4 /* WidgetKit.framework */,
+				AA44433B2A51B07700E113E4 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AA5212BB2A498085008D33A8 = {
 			isa = PBXGroup;
 			children = (
 				AA5212C62A498085008D33A8 /* Recipes */,
+				AA4443382A51B07700E113E4 /* Frameworks */,
 				AA5212C52A498085008D33A8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,8 +106,8 @@
 		AA5212C62A498085008D33A8 /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
-				AA4443302A51A5DE00E113E4 /* Localization */,
 				AAB8A9FB2A4AAFC700E5188E /* Models */,
+				AA4443302A51A5DE00E113E4 /* Localization */,
 				AAE7AB112A49843700C94FC0 /* Views */,
 				AA5212D92A4980A3008D33A8 /* Pages */,
 				AA5212C72A498085008D33A8 /* RecipesApp.swift */,
@@ -143,6 +168,7 @@
 				AA5212C02A498085008D33A8 /* Sources */,
 				AA5212C12A498085008D33A8 /* Frameworks */,
 				AA5212C22A498085008D33A8 /* Resources */,
+				AA44434D2A51B07A00E113E4 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -344,6 +370,7 @@
 		AA5212D72A498086008D33A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Recipes/Recipes.entitlements;
@@ -381,6 +408,7 @@
 		AA5212D82A498086008D33A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Recipes/Recipes.entitlements;

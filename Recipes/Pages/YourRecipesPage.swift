@@ -10,18 +10,12 @@ import SwiftData
 
 struct YourRecipesPage: View {
     
-    @Environment(\.modelContext)
-    private var modelContext
-    
-    @Query
-    private var recipes: [Recipe]
-    
-    @State
-    var searchText: String = ""
+    @Environment(\.modelContext) private var modelContext
+    @Query private var recipes: [Recipe]
     
     var body: some View {
         List {
-            ForEach(filteredRecipes()) { recipe in
+            ForEach(recipes) { recipe in
                 NavigationLink {
                     RecipeDetailView(recipe: recipe)
                 } label: {
@@ -60,12 +54,5 @@ struct YourRecipesPage: View {
         }
         .navigationTitle("Your recipes")
         .navigationBarTitleDisplayMode(.inline)
-        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
-    }
-    
-    func filteredRecipes() -> [Recipe] {
-        return recipes.filter { recipe in
-            recipe.title.contains(searchText) || searchText.count == 0
-        }
     }
 }

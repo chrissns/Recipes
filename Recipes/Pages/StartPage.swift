@@ -36,7 +36,7 @@ struct StartPage: View {
                             }
                         }
                         NavigationLink {
-                            Text("No shared recipes.")
+                            Text("No shared recipes")
                                 .font(.title)
                                 .foregroundStyle(.gray)
                                 .navigationTitle("Shared")
@@ -61,7 +61,7 @@ struct StartPage: View {
                                     RecipeDetailView(recipe: recipe)
                                 } label: {
                                     HStack {
-                                        Image(systemName: "person")
+                                        Image(systemName: "list.bullet.rectangle.portrait")
                                             .frame(width: iconSize, height: iconSize)
                                         VStack(alignment: .leading) {
                                             Text(recipe.title)

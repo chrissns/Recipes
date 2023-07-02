@@ -11,7 +11,7 @@ struct CreateRecipePage: View {
     
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
-    @State var recipe: Recipe = Recipe(title: "", shortInfo: "", instructions: "")
+    @State var recipe: Recipe = Recipe(id: UUID(), title: "", shortInfo: "", instructions: "")
     
     var body: some View {
         ZStack {

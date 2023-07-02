@@ -17,8 +17,8 @@ final class Recipe {
     var instructions: String
     var isFavorite: Bool
     
-    init(title: String, shortInfo: String, instructions: String) {
-        self.id = UUID()
+    init(id: UUID, title: String, shortInfo: String, instructions: String) {
+        self.id = id
         self.title = title
         self.shortInfo = shortInfo
         self.ingredients = []

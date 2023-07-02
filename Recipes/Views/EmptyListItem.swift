@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct EmptyListItem: View {
+    
+    @State var height: Float
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+        }
+        .frame(height: CGFloat(height))
+        .listRowBackground(Color.clear)
     }
-}
-
-#Preview {
-    EmptyListItem()
 }

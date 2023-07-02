@@ -11,7 +11,7 @@ struct CreateRecipePage: View {
     
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
-    @State var recipe: Recipe = Recipe(title: "", shortInfo: "", ingredients: [], instructions: "")
+    @State var recipe: Recipe = Recipe(title: "", shortInfo: "", instructions: "")
     
     var body: some View {
         ZStack {
@@ -25,17 +25,33 @@ struct CreateRecipePage: View {
                 }
                 Section {
                     // A list of items with a text field for name, number select for amount and dropdown select for unit
-                    ForEach(recipe.ingredients) { ingredient in
-                        HStack {
-                            Text(ingredient.name)
+                    if recipe.ingredients.count > 0 {
+                        ForEach(recipe.ingredients.indices, id: \.self) { index in
+                            HStack {
+                                TextField("Ingredient...", text: self.$recipe.ingredients[index])
+                            }
+                            .swipeActions {
+                                Button() {
+                                    withAnimation {
+                                        recipe.remove(ingredient: self.recipe.ingredients[index])
+                                    }
+                                } label: {
+                                    Image(systemName: "trash")
+                                }
+                                .tint(.red)
+                            }
                         }
+                    } else {
+                        Text("Tap the \"+\" icon to add an ingredient.")
+                            .foregroundStyle(.gray)
                     }
                 } header: {
                     HStack {
                         Text("Ingredients")
                         Spacer()
                         Button {
-                            recipe.ingredients.append(Ingredient(name: "", amount: ""))
+                            recipe.add(ingredient: "")
+                            print(recipe)
                         } label: {
                             Image(systemName: "plus")
                         }
@@ -43,10 +59,11 @@ struct CreateRecipePage: View {
                 }
                 Section {
                     // Long text area
-                    TextField("Write instructions...", text: $recipe.instructions)
+                    TextField("Write instructions...", text: $recipe.instructions, axis: .vertical)
                 } header: {
                     Text("Instructions")
                 }
+                EmptyListItem(height: 40.0)
             }
             VStack {
                 Spacer()

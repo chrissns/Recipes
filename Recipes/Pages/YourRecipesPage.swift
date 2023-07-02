@@ -10,9 +10,14 @@ import SwiftData
 
 struct YourRecipesPage: View {
     
-    @Environment(\.modelContext) private var modelContext
-    @Query private var recipes: [Recipe]
-    @State var searchText: String = ""
+    @Environment(\.modelContext)
+    private var modelContext
+    
+    @Query
+    private var recipes: [Recipe]
+    
+    @State
+    var searchText: String = ""
     
     var body: some View {
         List {

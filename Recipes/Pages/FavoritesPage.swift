@@ -6,13 +6,37 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct FavoritesPage: View {
+    
+    @Environment(\.modelContext) private var modelContext
+    @Query private var recipes: [Recipe]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(favoriteRecipes()) { recipe in
+                NavigationLink {
+                    RecipeDetailView(recipe: recipe)
+                } label: {
+                    HStack {
+                        Image(systemName: "person")
+                            .frame(width: iconSize, height: iconSize)
+                        VStack(alignment: .leading) {
+                            Text(recipe.title)
+                                .font(.headline)
+                            Text(recipe.shortInfo)
+                                .foregroundStyle(.gray)
+                        }
+                    }
+                }
+            }
+        }
+        .navigationTitle("Favorites")
+        .navigationBarTitleDisplayMode(.inline)
     }
-}
-
-#Preview {
-    FavoritesPage()
+    
+    func favoriteRecipes() -> [Recipe] {
+        return recipes.filter { $0.isFavorite }
+    }
 }

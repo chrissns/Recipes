@@ -8,7 +8,7 @@
 import SwiftUI
 import WidgetKit
 
-struct RecipeDetailView: View {
+struct RecipeDetailPage: View {
     
     @State var recipe: Recipe
     
@@ -19,6 +19,15 @@ struct RecipeDetailView: View {
                     Text(recipe.title)
                         .font(.headline)
                 }
+            }
+            Section {
+                HStack(spacing: 3.0) {
+                    ForEach(recipe.tags, id: \.self) { tag in
+                        TagView(text: tag, icon: "number")
+                    }
+                }
+            } header: {
+                Text("Tags")
             }
             Section {
                 ForEach(recipe.ingredients, id: \.self) { ingredient in

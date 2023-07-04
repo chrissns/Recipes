@@ -17,7 +17,7 @@ struct YourRecipesPage: View {
         List {
             ForEach(recipes) { recipe in
                 NavigationLink {
-                    RecipeDetailView(recipe: recipe)
+                    RecipeDetailPage(recipe: recipe)
                 } label: {
                     HStack {
                         Image(systemName: "list.bullet.rectangle.portrait")
@@ -41,7 +41,7 @@ struct YourRecipesPage: View {
                     .tint(.accentColor)
                 }
                 .swipeActions(edge: .trailing) {
-                    Button {
+                    Button(role: .destructive) {
                         withAnimation {
                             modelContext.delete(object: recipe)
                         }

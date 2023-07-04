@@ -9,18 +9,18 @@ import Foundation
 import SwiftData
 
 @Model
-final class Recipe {
-    var id: UUID
+class Recipe {
     var title: String
     var shortInfo: String
+    var tags: [String]
     var ingredients: [String]
     var instructions: String
     var isFavorite: Bool
     
-    init(id: UUID, title: String, shortInfo: String, instructions: String) {
-        self.id = id
+    init(title: String, shortInfo: String, tags: [String], instructions: String) {
         self.title = title
         self.shortInfo = shortInfo
+        self.tags = tags
         self.ingredients = []
         self.instructions = instructions
         self.isFavorite = false
@@ -30,6 +30,10 @@ final class Recipe {
         self.ingredients.append(ingredient)
     }
     
+    func add(tag: String) -> Void {
+        self.tags.append(tag)
+    }
+    
     func remove(ingredient: String) -> Void {
         let index = self.ingredients.firstIndex(of: ingredient)
         if index == -1 {
@@ -37,5 +41,14 @@ final class Recipe {
         }
         
         self.ingredients.remove(at: index!)
+    }
+    
+    func remove(tag: String) -> Void {
+        let index = self.tags.firstIndex(of: tag)
+        if index == -1 {
+            return
+        }
+        
+        self.tags.remove(at: index!)
     }
 }

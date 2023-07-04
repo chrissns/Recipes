@@ -58,7 +58,7 @@ struct StartPage: View {
                         if favoriteRecipes().count > 0 {
                             ForEach(favoriteRecipes()) { recipe in
                                 NavigationLink {
-                                    RecipeDetailView(recipe: recipe)
+                                    RecipeDetailPage(recipe: recipe)
                                 } label: {
                                     HStack {
                                         Image(systemName: "list.bullet.rectangle.portrait")
@@ -79,17 +79,15 @@ struct StartPage: View {
                     } header: {
                         Text("Favorites")
                     }
-                    EmptyListItem(height: 40.0)
+                    EmptyListSpace(height: 40.0)
                 } else {
                     Section {
                         if filteredRecipes().count > 0 {
                             ForEach(filteredRecipes()) { recipe in
                                 NavigationLink {
-                                    RecipeDetailView(recipe: recipe)
+                                    RecipeDetailPage(recipe: recipe)
                                 } label: {
                                     HStack {
-                                        Image(systemName: "list.bullet.rectangle.portrait")
-                                            .frame(width: iconSize, height: iconSize)
                                         VStack(alignment: .leading) {
                                             Text(recipe.title)
                                                 .font(.headline)
@@ -97,7 +95,12 @@ struct StartPage: View {
                                                 .foregroundStyle(.gray)
                                             HStack(spacing: 3.0) {
                                                 ForEach(filteredIngredients(recipe: recipe), id: \.self) { instruction in
-                                                    TagView(text: instruction)
+                                                    TagView(text: instruction, icon: "circlebadge")
+                                                }
+                                            }
+                                            HStack(spacing: 3.0) {
+                                                ForEach(filteredTags(recipe: recipe), id: \.self) { instruction in
+                                                    TagView(text: instruction, icon: "number")
                                                 }
                                             }
                                         }
@@ -143,16 +146,21 @@ struct StartPage: View {
     
     func filteredRecipes() -> [Recipe] {
         return recipes.filter { recipe in
-            recipe.title.contains(searchText.lowercased())
-            || recipe.shortInfo.contains(searchText.lowercased())
-            || recipe.ingredients.filter { item in
-                item.lowercased().contains(searchText.lowercased())
-            }.count > 0
+            return recipe.title.lowercased().contains(searchText.lowercased())
+                || recipe.shortInfo.lowercased().contains(searchText.lowercased())
+                || recipe.ingredients.filter { $0.lowercased().contains(searchText.lowercased()) }.count > 0
+                || recipe.tags.filter { $0.lowercased().contains(searchText.lowercased()) }.count > 0
         }
     }
     
     func filteredIngredients(recipe: Recipe) -> [String] {
         return recipe.ingredients.filter(maxItems: 2) { ingredient in
+            ingredient.lowercased().contains(searchText.lowercased())
+        }
+    }
+    
+    func filteredTags(recipe: Recipe) -> [String] {
+        return recipe.tags.filter { ingredient in
             ingredient.lowercased().contains(searchText.lowercased())
         }
     }

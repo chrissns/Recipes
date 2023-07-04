@@ -17,7 +17,7 @@ struct FavoritesPage: View {
         List {
             ForEach(favoriteRecipes()) { recipe in
                 NavigationLink {
-                    RecipeDetailView(recipe: recipe)
+                    RecipeDetailPage(recipe: recipe)
                 } label: {
                     HStack {
                         Image(systemName: "list.bullet.rectangle.portrait")

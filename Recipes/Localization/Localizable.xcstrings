@@ -1,6 +1,17 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "..." : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "..."
+          }
+        }
+      }
+    },
     "Couldn't find anything for your search." : {
       "localizations" : {
         "de" : {
@@ -188,6 +199,36 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kurzbeschreibung..."
+          }
+        }
+      }
+    },
+    "Tag..." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tag..."
+          }
+        }
+      }
+    },
+    "Tags" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tags"
+          }
+        }
+      }
+    },
+    "Tap the \"+\" icon to add a tag." : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tippe auf \"+\" um einen Tag hinzuzufügen."
           }
         }
       }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct EmptyListItem: View {
+struct EmptyListSpace: View {
     
     @State var height: Float
     

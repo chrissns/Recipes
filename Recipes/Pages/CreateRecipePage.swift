@@ -11,7 +11,7 @@ struct CreateRecipePage: View {
     
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
-    @State var recipe: Recipe = Recipe(id: UUID(), title: "", shortInfo: "", instructions: "")
+    @State var recipe: Recipe = Recipe(title: "", shortInfo: "", tags: [], instructions: "")
     
     var body: some View {
         ZStack {
@@ -21,6 +21,39 @@ struct CreateRecipePage: View {
                     TextField("Short info...", text: $recipe.shortInfo)
                 } header: {
                     Text("Name and info")
+                }
+                Section {
+                    if recipe.tags.count > 0 {
+                        ForEach(recipe.tags.indices, id: \.self) { index in
+                            HStack {
+                                Image(systemName: "number")
+                                TextField("Tag...", text: self.$recipe.tags[index])
+                            }
+                            .swipeActions {
+                                Button() {
+                                    withAnimation {
+                                        recipe.remove(tag: self.recipe.tags[index])
+                                    }
+                                } label: {
+                                    Image(systemName: "trash")
+                                }
+                                .tint(.red)
+                            }
+                        }
+                    } else {
+                        Text("Tap the \"+\" icon to add a tag.")
+                            .foregroundStyle(.gray)
+                    }
+                } header: {
+                    HStack {
+                        Text("Tags")
+                        Spacer()
+                        Button {
+                            recipe.add(tag: "")
+                        } label: {
+                            Image(systemName: "plus")
+                        }
+                    }
                 }
                 Section {
                     if recipe.ingredients.count > 0 {
@@ -49,7 +82,6 @@ struct CreateRecipePage: View {
                         Spacer()
                         Button {
                             recipe.add(ingredient: "")
-                            print(recipe)
                         } label: {
                             Image(systemName: "plus")
                         }
@@ -60,7 +92,7 @@ struct CreateRecipePage: View {
                 } header: {
                     Text("Instructions")
                 }
-                EmptyListItem(height: 40.0)
+                EmptyListSpace(height: 40.0)
             }
             VStack {
                 Spacer()

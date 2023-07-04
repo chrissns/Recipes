@@ -51,4 +51,8 @@ class Recipe {
         
         self.tags.remove(at: index!)
     }
+    
+    func share() -> Void {
+        print("Sharing recipe: \(title)")
+    }
 }

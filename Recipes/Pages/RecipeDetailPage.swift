@@ -15,9 +15,11 @@ struct RecipeDetailPage: View {
     var body: some View {
         List {
             Section {
-                HStack {
+                VStack(alignment: .leading) {
                     Text(recipe.title)
                         .font(.headline)
+                    Text(recipe.shortInfo)
+                        .foregroundStyle(.gray)
                 }
             }
             Section {
@@ -47,10 +49,11 @@ struct RecipeDetailPage: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem {
-                Button {
-                    print("Share: \(recipe.title)")
+                NavigationLink {
+//                    print("Share: \(recipe.title)")
+                    CreateRecipePage(recipe: recipe, editing: true)
                 } label: {
-                    Image(systemName: "square.and.arrow.up")
+                    Image(systemName: "square.and.pencil")
                 }
             }
             ToolbarItem {

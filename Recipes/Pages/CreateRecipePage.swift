@@ -12,6 +12,7 @@ struct CreateRecipePage: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
     @State var recipe: Recipe = Recipe(title: "", shortInfo: "", tags: [], instructions: "")
+    @State var editing: Bool = false
     
     var body: some View {
         ZStack {
@@ -98,9 +99,9 @@ struct CreateRecipePage: View {
                 Spacer()
                 VStack(alignment: .center) {
                     Button {
-                        createRecipe()
+                        saveRecipe()
                     } label: {
-                        Text("Create recipe")
+                        Text(editing ? "Save recipe" : "Create recipe")
                             .fontWeight(.bold)
                             .frame(maxWidth: .infinity)
                     }
@@ -112,12 +113,14 @@ struct CreateRecipePage: View {
                 .shadow(radius: 10.0)
             }
         }
-        .navigationTitle("New recipe")
+        .navigationTitle(editing ? "Edit recipe" : "New recipe")
         .navigationBarTitleDisplayMode(.inline)
     }
     
-    func createRecipe() {
-        modelContext.insert(recipe)
+    func saveRecipe() {
+        if !editing {
+            modelContext.insert(recipe)
+        }
         dismiss()
     }
 }

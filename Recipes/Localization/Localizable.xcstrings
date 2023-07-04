@@ -42,6 +42,9 @@
         }
       }
     },
+    "Edit recipe" : {
+
+    },
     "Favorites" : {
       "localizations" : {
         "de" : {
@@ -163,6 +166,9 @@
         }
       }
     },
+    "Save recipe" : {
+
+    },
     "Search for recipes, ingredients, ..." : {
       "localizations" : {
         "de" : {
@@ -172,6 +178,9 @@
           }
         }
       }
+    },
+    "Share recipe" : {
+
     },
     "Shared" : {
       "localizations" : {

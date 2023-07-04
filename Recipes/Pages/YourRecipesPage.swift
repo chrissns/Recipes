@@ -30,16 +30,6 @@ struct YourRecipesPage: View {
                         }
                     }
                 }
-                .swipeActions(edge: .leading) {
-                    Button {
-                        withAnimation {
-                            print("Edit: \(recipe.title)")
-                        }
-                    } label: {
-                        Image(systemName: "pencil")
-                    }
-                    .tint(.accentColor)
-                }
                 .swipeActions(edge: .trailing) {
                     Button(role: .destructive) {
                         withAnimation {
@@ -49,6 +39,16 @@ struct YourRecipesPage: View {
                         Image(systemName: "trash")
                     }
                     .tint(.red)
+                }
+                .contextMenu {
+                    Button {
+                        recipe.share()
+                    } label: {
+                        HStack(spacing: 3.0) {
+                            Image(systemName: "square.and.arrow.up")
+                            Text("Share recipe")
+                        }
+                    }
                 }
             }
         }

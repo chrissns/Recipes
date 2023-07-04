@@ -71,6 +71,16 @@ struct StartPage: View {
                                         }
                                     }
                                 }
+                                .contextMenu {
+                                    Button {
+                                        recipe.share()
+                                    } label: {
+                                        HStack(spacing: 3.0) {
+                                            Image(systemName: "square.and.arrow.up")
+                                            Text("Share recipe")
+                                        }
+                                    }
+                                }
                             }
                         } else {
                             Text("Tap the star icon in your recipe to add it to your favorites.")

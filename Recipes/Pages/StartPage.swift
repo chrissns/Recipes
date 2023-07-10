@@ -105,7 +105,7 @@ struct StartPage: View {
                                                 .foregroundStyle(.gray)
                                             HStack(spacing: 3.0) {
                                                 ForEach(filteredIngredients(recipe: recipe), id: \.self) { instruction in
-                                                    TagView(text: instruction, icon: "circlebadge")
+                                                    TagView(text: instruction, icon: "plus")
                                                 }
                                             }
                                             HStack(spacing: 3.0) {

@@ -170,8 +170,9 @@ struct StartPage: View {
     }
     
     func filteredTags(recipe: Recipe) -> [String] {
-        return recipe.tags.filter { ingredient in
-            ingredient.lowercased().contains(searchText.lowercased())
+        return recipe.tags.filter { tag in
+            return tag.lowercased().contains(searchText.lowercased())
+                || tag.lowercased().contains("#\(searchText.lowercased())")
         }
     }
 }

@@ -43,7 +43,14 @@
       }
     },
     "Edit recipe" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rezept bearbeiten"
+          }
+        }
+      }
     },
     "Favorites" : {
       "localizations" : {
@@ -167,7 +174,14 @@
       }
     },
     "Save recipe" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rezept speichern"
+          }
+        }
+      }
     },
     "Search for recipes, ingredients, ..." : {
       "localizations" : {
@@ -180,7 +194,14 @@
       }
     },
     "Share recipe" : {
-
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rezept teilen"
+          }
+        }
+      }
     },
     "Shared" : {
       "localizations" : {

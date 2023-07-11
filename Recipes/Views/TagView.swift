@@ -30,7 +30,6 @@ struct TagView: View {
             .padding(5)
         }
         .background {
-//            Color(red: 0.75, green: 0.75, blue: 0.8)
             Color(.accent)
         }
         .cornerRadius(5.0)

@@ -1,4 +1,4 @@
-# de.christiansohns.school.recipes
+# de.christiansohns.recipes
 An App to add your recipes.
 
 ## Platforms

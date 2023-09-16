@@ -9,7 +9,8 @@ import SwiftUI
 
 struct EmptyListSpace: View {
     
-    @State var height: Float
+    @State 
+    var height: Float
     
     var body: some View {
         VStack {

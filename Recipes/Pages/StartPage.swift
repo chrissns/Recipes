@@ -12,9 +12,11 @@ let iconSize = 25.0
 
 struct StartPage: View {
     
-    @State var searchText: String = ""
-    
-    @Query private var recipes: [Recipe]
+    @State 
+    private var searchText: String = ""
+  
+    @Query
+    private var recipes: [Recipe]
     
     var body: some View {
         ZStack {
@@ -126,7 +128,6 @@ struct StartPage: View {
             }
             .searchable(text: $searchText, placement: .toolbar, prompt: "Search for recipes, ingredients, ...")
             if searchText.count == 0 {
-                
                 VStack {
                     Spacer()
                     VStack(alignment: .center) {
@@ -171,8 +172,7 @@ struct StartPage: View {
     
     func filteredTags(recipe: Recipe) -> [String] {
         return recipe.tags.filter { tag in
-            return tag.lowercased().contains(searchText.lowercased())
-                || tag.lowercased().contains("#\(searchText.lowercased())")
+            tag.lowercased().contains(searchText.lowercased())
         }
     }
 }

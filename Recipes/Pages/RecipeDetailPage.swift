@@ -10,7 +10,8 @@ import WidgetKit
 
 struct RecipeDetailPage: View {
     
-    @State var recipe: Recipe
+    @State 
+    var recipe: Recipe
     
     var body: some View {
         List {

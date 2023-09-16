@@ -49,7 +49,6 @@
 		AA5212CB2A498086008D33A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA5212CE2A498086008D33A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AA5212D02A498086008D33A8 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		AA5212D22A498086008D33A8 /* Recipes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Recipes.entitlements; sourceTree = "<group>"; };
 		AA5212D32A498086008D33A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA5212DA2A4980B2008D33A8 /* StartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPage.swift; sourceTree = "<group>"; };
 		AAB8A9FE2A4AB25000E5188E /* CreateRecipePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecipePage.swift; sourceTree = "<group>"; };
@@ -113,7 +112,6 @@
 				AA5212C72A498085008D33A8 /* RecipesApp.swift */,
 				AA5212C92A498085008D33A8 /* ContentView.swift */,
 				AA5212CB2A498086008D33A8 /* Assets.xcassets */,
-				AA5212D22A498086008D33A8 /* Recipes.entitlements */,
 				AA5212D32A498086008D33A8 /* Info.plist */,
 				AA5212CD2A498086008D33A8 /* Preview Content */,
 			);

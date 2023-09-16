@@ -10,8 +10,11 @@ import SwiftData
 
 struct YourRecipesPage: View {
     
-    @Environment(\.modelContext) private var modelContext
-    @Query private var recipes: [Recipe]
+    @Environment(\.modelContext) 
+    private var modelContext
+    
+    @Query 
+    private var recipes: [Recipe]
     
     var body: some View {
         List {
@@ -33,7 +36,7 @@ struct YourRecipesPage: View {
                 .swipeActions(edge: .trailing) {
                     Button(role: .destructive) {
                         withAnimation {
-                            modelContext.delete(object: recipe)
+                            modelContext.delete(recipe)
                         }
                     } label: {
                         Image(systemName: "trash")

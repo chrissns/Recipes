@@ -9,8 +9,11 @@ import SwiftUI
 
 struct TagView: View {
     
-    @State var text: String
-    @State var icon: String
+    @State 
+    var text: String
+    
+    @State 
+    var icon: String
     
     var body: some View {
         VStack {

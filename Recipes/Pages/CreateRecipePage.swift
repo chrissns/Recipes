@@ -9,10 +9,17 @@ import SwiftUI
 
 struct CreateRecipePage: View {
     
-    @Environment(\.dismiss) private var dismiss
-    @Environment(\.modelContext) private var modelContext
-    @State var recipe: Recipe = Recipe(title: "", shortInfo: "", tags: [], instructions: "")
-    @State var editing: Bool = false
+    @Environment(\.dismiss) 
+    private var dismiss
+    
+    @Environment(\.modelContext) 
+    private var modelContext
+    
+    @State 
+    var recipe: Recipe = Recipe(title: "", shortInfo: "", tags: [], instructions: "")
+    
+    @State 
+    var editing: Bool = false
     
     var body: some View {
         ZStack {

@@ -51,6 +51,7 @@
 		AA5212D02A498086008D33A8 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		AA5212D32A498086008D33A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA5212DA2A4980B2008D33A8 /* StartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPage.swift; sourceTree = "<group>"; };
+		AAA088822AC1360000A468C9 /* Recipes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Recipes.entitlements; sourceTree = "<group>"; };
 		AAB8A9FE2A4AB25000E5188E /* CreateRecipePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRecipePage.swift; sourceTree = "<group>"; };
 		AAE7AB0F2A49835F00C94FC0 /* FavoritesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPage.swift; sourceTree = "<group>"; };
 		AAE7AB122A49844500C94FC0 /* RecipeDetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailPage.swift; sourceTree = "<group>"; };
@@ -114,6 +115,7 @@
 				AA5212CB2A498086008D33A8 /* Assets.xcassets */,
 				AA5212D32A498086008D33A8 /* Info.plist */,
 				AA5212CD2A498086008D33A8 /* Preview Content */,
+				AAA088822AC1360000A468C9 /* Recipes.entitlements */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";

@@ -10,10 +10,10 @@ import SwiftData
 
 struct FavoritesPage: View {
     
-    @Environment(\.modelContext) 
+    @Environment(\.modelContext)
     private var modelContext
     
-    @Query 
+    @Query
     private var recipes: [Recipe]
     
     var body: some View {

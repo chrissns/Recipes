@@ -12,9 +12,9 @@ let iconSize = 25.0
 
 struct StartPage: View {
     
-    @State 
+    @State
     private var searchText: String = ""
-  
+    
     @Query
     private var recipes: [Recipe]
     

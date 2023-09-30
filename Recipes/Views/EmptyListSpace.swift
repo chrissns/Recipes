@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmptyListSpace: View {
     
-    @State 
+    @State
     var height: Float
     
     var body: some View {

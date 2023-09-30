@@ -9,10 +9,10 @@ import SwiftUI
 
 struct TagView: View {
     
-    @State 
+    @State
     var text: String
     
-    @State 
+    @State
     var icon: String
     
     var body: some View {

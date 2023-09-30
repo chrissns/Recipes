@@ -10,7 +10,7 @@ import WidgetKit
 
 struct RecipeDetailPage: View {
     
-    @State 
+    @State
     var recipe: Recipe
     
     var body: some View {
@@ -51,7 +51,6 @@ struct RecipeDetailPage: View {
         .toolbar {
             ToolbarItem {
                 NavigationLink {
-//                    print("Share: \(recipe.title)")
                     CreateRecipePage(recipe: recipe, editing: true)
                 } label: {
                     Image(systemName: "square.and.pencil")

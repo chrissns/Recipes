@@ -41,7 +41,10 @@ struct RecipeDetailPage: View {
                 Text("Ingredients")
             }
             Section {
-                Text(recipe.instructions)
+                ForEach(recipe.instructions, id: \.self) { ingredient in
+                    Text(ingredient)
+                        .foregroundStyle(.gray)
+                }
             } header: {
                 Text("Instructions")
             }

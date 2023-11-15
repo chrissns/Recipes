@@ -14,10 +14,10 @@ class Recipe {
     var shortInfo: String
     var tags: [String]
     var ingredients: [String]
-    var instructions: String
+    var instructions: [String]
     var isFavorite: Bool
     
-    init(title: String, shortInfo: String, tags: [String], instructions: String) {
+    init(title: String, shortInfo: String, tags: [String], instructions: [String]) {
         self.title = title
         self.shortInfo = shortInfo
         self.tags = tags
@@ -32,6 +32,10 @@ class Recipe {
     
     func add(tag: String) -> Void {
         self.tags.append(tag)
+    }
+    
+    func add(instruction: String) -> Void {
+        self.instructions.append(instruction)
     }
     
     func remove(ingredient: String) -> Void {
@@ -50,6 +54,15 @@ class Recipe {
         }
         
         self.tags.remove(at: index!)
+    }
+    
+    func remove(instruction: String) -> Void {
+        let index = self.instructions.firstIndex(of: instruction)
+        if index == -1 {
+            return
+        }
+        
+        self.instructions.remove(at: index!)
     }
     
     func share() -> Void {

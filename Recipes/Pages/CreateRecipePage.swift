@@ -16,7 +16,7 @@ struct CreateRecipePage: View {
     private var modelContext
     
     @State 
-    var recipe: Recipe = Recipe(title: "", shortInfo: "", tags: [], instructions: "")
+    var recipe: Recipe = Recipe(title: "", shortInfo: "", tags: [], instructions: [])
     
     @State 
     var editing: Bool = false
@@ -96,9 +96,46 @@ struct CreateRecipePage: View {
                     }
                 }
                 Section {
-                    TextField("Write instructions...", text: $recipe.instructions, axis: .vertical)
+                    if recipe.instructions.count > 0 {
+                        ForEach(recipe.instructions.indices, id: \.self) { index in
+                            HStack {
+                                TextField("Instruction...", text: self.$recipe.instructions[index])
+                            }
+                            .swipeActions(edge: .trailing) {
+                                Button {
+                                    withAnimation {
+                                        recipe.remove(ingredient: self.recipe.instructions[index])
+                                    }
+                                } label: {
+                                    Image(systemName: "trash")
+                                }
+                                .tint(.red)
+                            }
+                            .swipeActions(edge: .leading) {
+                                Button {
+                                    withAnimation {
+                                        recipe.remove(ingredient: self.recipe.instructions[index])
+                                    }
+                                } label: {
+                                    Image(systemName: "timer")
+                                }
+                                .tint(.orange)
+                            }
+                        }
+                    } else {
+                        Text("Tap the \"+\" icon to add an instruction.")
+                            .foregroundStyle(.gray)
+                    }
                 } header: {
-                    Text("Instructions")
+                    HStack {
+                        Text("Instructions")
+                        Spacer()
+                        Button {
+                            recipe.add(instruction: "")
+                        } label: {
+                            Image(systemName: "plus")
+                        }
+                    }
                 }
                 EmptyListSpace(height: 40.0)
             }

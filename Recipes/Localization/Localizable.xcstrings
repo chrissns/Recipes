@@ -82,6 +82,9 @@
         }
       }
     },
+    "Instruction..." : {
+
+    },
     "Instructions" : {
       "localizations" : {
         "de" : {
@@ -273,6 +276,9 @@
         }
       }
     },
+    "Tap the \"+\" icon to add an instruction." : {
+
+    },
     "Tap the star icon in your recipe to add it to your favorites." : {
       "localizations" : {
         "de" : {
@@ -284,6 +290,7 @@
       }
     },
     "Write instructions..." : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
